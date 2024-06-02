@@ -24,6 +24,8 @@
 		D9F7DFF72C0D09EF00FD2181 /* SavedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFF62C0D09EF00FD2181 /* SavedWorkout.swift */; };
 		D9F7DFF92C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFF82C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift */; };
 		D9F7DFFB2C0D0B3300FD2181 /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */; };
+		D9F7DFFE2C0D1BF000FD2181 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = D9F7DFFD2C0D1BF000FD2181 /* SQLite */; };
+		D9F7E0012C0D23ED00FD2181 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7E0002C0D23ED00FD2181 /* SQLiteDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,7 @@
 		D9F7DFF62C0D09EF00FD2181 /* SavedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkout.swift; sourceTree = "<group>"; };
 		D9F7DFF82C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryViewModel.swift; sourceTree = "<group>"; };
 		D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
+		D9F7E0002C0D23ED00FD2181 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F7DFFE2C0D1BF000FD2181 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 		D9F7DFB12C0A4AE700FD2181 /* Coolcicada PPL */ = {
 			isa = PBXGroup;
 			children = (
+				D9F7DFFF2C0D23DD00FD2181 /* Database */,
 				D9F7DFE92C0CD10D00FD2181 /* Extensions */,
 				D9F7DFDE2C0A4F8B00FD2181 /* Views */,
 				D9F7DFDD2C0A4F8000FD2181 /* ViewModels */,
@@ -189,6 +194,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D9F7DFFF2C0D23DD00FD2181 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7E0002C0D23ED00FD2181 /* SQLiteDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,6 +218,9 @@
 			dependencies = (
 			);
 			name = "Coolcicada PPL";
+			packageProductDependencies = (
+				D9F7DFFD2C0D1BF000FD2181 /* SQLite */,
+			);
 			productName = "Coolcicada PPL";
 			productReference = D9F7DFAF2C0A4AE700FD2181 /* Coolcicada PPL.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +293,9 @@
 				Base,
 			);
 			mainGroup = D9F7DFA62C0A4AE700FD2181;
+			packageReferences = (
+				D9F7DFFC2C0D1BF000FD2181 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = D9F7DFB02C0A4AE700FD2181 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,6 +340,7 @@
 			files = (
 				D9F7DFF92C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift in Sources */,
 				D9F7DFB52C0A4AE700FD2181 /* ContentView.swift in Sources */,
+				D9F7E0012C0D23ED00FD2181 /* SQLiteDatabase.swift in Sources */,
 				D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */,
 				D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */,
 				D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */,
@@ -656,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9F7DFFC2C0D1BF000FD2181 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9F7DFFD2C0D1BF000FD2181 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9F7DFFC2C0D1BF000FD2181 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9F7DFA72C0A4AE700FD2181 /* Project object */;
 }

@@ -4,6 +4,9 @@ import Foundation
 class WorkoutViewModel: ObservableObject {
     @Published var workouts: [Workout] = []
     
+    //Publisher to signal
+    let workoutSaved = PassthroughSubject<Void, Never>()
+    
     init() {
         loadWorkouts()
     }
@@ -38,9 +41,9 @@ class WorkoutViewModel: ObservableObject {
         
         
         workouts = [
-            Workout(name: "Push (Chest/Triceps/Shoulders)", exercises: pushExercises),
-            Workout(name: "Pull (Back/Biceps)", exercises: pullExercises),
-            Workout(name: "Legs (Quad/Ham/Calves)", exercises: legsExercises)
+            Workout(name: "Push (Chest/Triceps/Shoulders)", exercises: pushExercises, date: Date()),
+            Workout(name: "Pull (Back/Biceps)", exercises: pullExercises, date: Date()),
+            Workout(name: "Legs (Quad/Ham/Calves)", exercises: legsExercises, date: Date())
         ]
     }
     
@@ -54,4 +57,12 @@ class WorkoutViewModel: ObservableObject {
             }
         }
     };
+    
+    func saveWorkout(_ workout: Workout) {
+        SQLiteDatabase.shared.insertWorkout(workout)
+        workoutSaved.send() // send signal as publisher that workout has been saved
+        print("View Model saved workout")
+        // could add saved successfully icon
+    }
+    
 }

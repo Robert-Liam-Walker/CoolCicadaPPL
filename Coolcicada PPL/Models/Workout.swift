@@ -11,4 +11,5 @@ struct Workout : Identifiable {
     let id = UUID()
     let name: String
     var exercises: [Exercise]
+    let date: Date
 }

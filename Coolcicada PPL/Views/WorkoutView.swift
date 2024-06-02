@@ -17,6 +17,7 @@ struct WorkoutView: View {
         .navigationBarItems(trailing:
             Button(action: {
                 print("Save button tapped for workout: \(workout.name)")
+                viewModel.saveWorkout(workout)
             }) {
                 Text("Save")
                     .padding(8)

@@ -14,7 +14,7 @@ struct ContentView: View {
                     Image(systemName: "list.bullet")
                     Text("Workouts")
                 }
-            WorkoutHistoryView(viewModel: WorkoutHistoryViewModel())
+            WorkoutHistoryView(viewModel: WorkoutHistoryViewModel(workoutViewModel: viewModel))
                 .tabItem {
                     Image(systemName: "clock")
                     Text("History")
