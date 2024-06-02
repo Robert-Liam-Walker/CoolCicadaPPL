@@ -10,7 +10,15 @@ struct ContentView: View {
     var body: some View {
         TabView{
             WorkoutListView(viewModel: viewModel)
-            //HistoryView
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Workouts")
+                }
+            WorkoutHistoryView(viewModel: WorkoutHistoryViewModel())
+                .tabItem {
+                    Image(systemName: "clock")
+                    Text("History")
+                }
         }
     }
 }
