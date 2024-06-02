@@ -36,7 +36,7 @@ class WorkoutViewModel: ObservableObject {
             Exercise(name: "Standing Calf Raises (circuit machine)", sets: 5, reps: "10-12", weight: 0)
         ]
         
-        let currentDate = Date()
+        
         workouts = [
             Workout(name: "Push (Chest/Triceps/Shoulders)", exercises: pushExercises),
             Workout(name: "Pull (Back/Biceps)", exercises: pullExercises),
@@ -53,5 +53,5 @@ class WorkoutViewModel: ObservableObject {
                 objectWillChange.send()
             }
         }
-    }
+    };
 }
