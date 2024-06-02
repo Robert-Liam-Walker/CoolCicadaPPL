@@ -8,13 +8,16 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.workouts) { workout in
-                NavigationLink(destination: WorkoutView(viewModel: viewModel, workout: workout)) {
-                    Text(workout.name)
-                }
-            }
-            .navigationBarTitle("Workouts")
+        TabView{
+            WorkoutListView(viewModel: viewModel)
+            //HistoryView
         }
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(viewModel: WorkoutViewModel())
+    }
+}
+

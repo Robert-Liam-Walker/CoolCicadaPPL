@@ -20,6 +20,7 @@
 		D9F7DFE62C0A535100FD2181 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */; };
 		D9F7DFE82C0A537500FD2181 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */; };
 		D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFEA2C0CD11A00FD2181 /* UIApplication+Extension.swift */; };
+		D9F7DFF32C0CFF7B00FD2181 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFF22C0CFF7B00FD2181 /* WorkoutListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		D9F7DFEA2C0CD11A00FD2181 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		D9F7DFF22C0CFF7B00FD2181 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */,
 				D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */,
 				D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */,
+				D9F7DFF22C0CFF7B00FD2181 /* WorkoutListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */,
 				D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */,
 				D9F7DFE22C0A4FB100FD2181 /* Workout.swift in Sources */,
+				D9F7DFF32C0CFF7B00FD2181 /* WorkoutListView.swift in Sources */,
 				D9F7DFE62C0A535100FD2181 /* WorkoutView.swift in Sources */,
 				D9F7DFE82C0A537500FD2181 /* ExerciseView.swift in Sources */,
 				D9F7DFE42C0A52D800FD2181 /* WorkoutViewModel.swift in Sources */,
