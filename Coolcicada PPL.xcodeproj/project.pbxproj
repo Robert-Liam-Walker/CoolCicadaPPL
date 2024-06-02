@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFB22C0A4AE700FD2181 /* Coolcicada_PPLApp.swift */; };
+		D9F7DFB52C0A4AE700FD2181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */; };
+		D9F7DFB72C0A4AE800FD2181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F7DFB62C0A4AE800FD2181 /* Assets.xcassets */; };
+		D9F7DFBA2C0A4AE800FD2181 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F7DFB92C0A4AE800FD2181 /* Preview Assets.xcassets */; };
+		D9F7DFC42C0A4AE900FD2181 /* Coolcicada_PPLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFC32C0A4AE900FD2181 /* Coolcicada_PPLTests.swift */; };
+		D9F7DFCE2C0A4AE900FD2181 /* Coolcicada_PPLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFCD2C0A4AE900FD2181 /* Coolcicada_PPLUITests.swift */; };
+		D9F7DFD02C0A4AE900FD2181 /* Coolcicada_PPLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFCF2C0A4AE900FD2181 /* Coolcicada_PPLUITestsLaunchTests.swift */; };
+		D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFDF2C0A4FA000FD2181 /* Exercise.swift */; };
+		D9F7DFE22C0A4FB100FD2181 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE12C0A4FB100FD2181 /* Workout.swift */; };
+		D9F7DFE42C0A52D800FD2181 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE32C0A52D800FD2181 /* WorkoutViewModel.swift */; };
+		D9F7DFE62C0A535100FD2181 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */; };
+		D9F7DFE82C0A537500FD2181 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */; };
+		D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFEA2C0CD11A00FD2181 /* UIApplication+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9F7DFC02C0A4AE900FD2181 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9F7DFA72C0A4AE700FD2181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F7DFAE2C0A4AE700FD2181;
+			remoteInfo = "Coolcicada PPL";
+		};
+		D9F7DFCA2C0A4AE900FD2181 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9F7DFA72C0A4AE700FD2181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F7DFAE2C0A4AE700FD2181;
+			remoteInfo = "Coolcicada PPL";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9F7DFAF2C0A4AE700FD2181 /* Coolcicada PPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coolcicada PPL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F7DFB22C0A4AE700FD2181 /* Coolcicada_PPLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coolcicada_PPLApp.swift; sourceTree = "<group>"; };
+		D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9F7DFB62C0A4AE800FD2181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9F7DFB92C0A4AE800FD2181 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9F7DFBF2C0A4AE900FD2181 /* Coolcicada PPLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coolcicada PPLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F7DFC32C0A4AE900FD2181 /* Coolcicada_PPLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coolcicada_PPLTests.swift; sourceTree = "<group>"; };
+		D9F7DFC92C0A4AE900FD2181 /* Coolcicada PPLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coolcicada PPLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F7DFCD2C0A4AE900FD2181 /* Coolcicada_PPLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coolcicada_PPLUITests.swift; sourceTree = "<group>"; };
+		D9F7DFCF2C0A4AE900FD2181 /* Coolcicada_PPLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coolcicada_PPLUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9F7DFDF2C0A4FA000FD2181 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		D9F7DFE12C0A4FB100FD2181 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		D9F7DFE32C0A52D800FD2181 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		D9F7DFEA2C0CD11A00FD2181 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9F7DFAC2C0A4AE700FD2181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFBC2C0A4AE900FD2181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFC62C0A4AE900FD2181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9F7DFA62C0A4AE700FD2181 = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFB12C0A4AE700FD2181 /* Coolcicada PPL */,
+				D9F7DFC22C0A4AE900FD2181 /* Coolcicada PPLTests */,
+				D9F7DFCC2C0A4AE900FD2181 /* Coolcicada PPLUITests */,
+				D9F7DFB02C0A4AE700FD2181 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F7DFB02C0A4AE700FD2181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFAF2C0A4AE700FD2181 /* Coolcicada PPL.app */,
+				D9F7DFBF2C0A4AE900FD2181 /* Coolcicada PPLTests.xctest */,
+				D9F7DFC92C0A4AE900FD2181 /* Coolcicada PPLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F7DFB12C0A4AE700FD2181 /* Coolcicada PPL */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFE92C0CD10D00FD2181 /* Extensions */,
+				D9F7DFDE2C0A4F8B00FD2181 /* Views */,
+				D9F7DFDD2C0A4F8000FD2181 /* ViewModels */,
+				D9F7DFDC2C0A4F7300FD2181 /* Models */,
+				D9F7DFB22C0A4AE700FD2181 /* Coolcicada_PPLApp.swift */,
+				D9F7DFB62C0A4AE800FD2181 /* Assets.xcassets */,
+				D9F7DFB82C0A4AE800FD2181 /* Preview Content */,
+			);
+			path = "Coolcicada PPL";
+			sourceTree = "<group>";
+		};
+		D9F7DFB82C0A4AE800FD2181 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFB92C0A4AE800FD2181 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D9F7DFC22C0A4AE900FD2181 /* Coolcicada PPLTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFC32C0A4AE900FD2181 /* Coolcicada_PPLTests.swift */,
+			);
+			path = "Coolcicada PPLTests";
+			sourceTree = "<group>";
+		};
+		D9F7DFCC2C0A4AE900FD2181 /* Coolcicada PPLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFCD2C0A4AE900FD2181 /* Coolcicada_PPLUITests.swift */,
+				D9F7DFCF2C0A4AE900FD2181 /* Coolcicada_PPLUITestsLaunchTests.swift */,
+			);
+			path = "Coolcicada PPLUITests";
+			sourceTree = "<group>";
+		};
+		D9F7DFDC2C0A4F7300FD2181 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFDF2C0A4FA000FD2181 /* Exercise.swift */,
+				D9F7DFE12C0A4FB100FD2181 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9F7DFDD2C0A4F8000FD2181 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFE32C0A52D800FD2181 /* WorkoutViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D9F7DFDE2C0A4F8B00FD2181 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */,
+				D9F7DFE52C0A535100FD2181 /* WorkoutView.swift */,
+				D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9F7DFE92C0CD10D00FD2181 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7DFEA2C0CD11A00FD2181 /* UIApplication+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9F7DFAE2C0A4AE700FD2181 /* Coolcicada PPL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F7DFD32C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPL" */;
+			buildPhases = (
+				D9F7DFAB2C0A4AE700FD2181 /* Sources */,
+				D9F7DFAC2C0A4AE700FD2181 /* Frameworks */,
+				D9F7DFAD2C0A4AE700FD2181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coolcicada PPL";
+			productName = "Coolcicada PPL";
+			productReference = D9F7DFAF2C0A4AE700FD2181 /* Coolcicada PPL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9F7DFBE2C0A4AE900FD2181 /* Coolcicada PPLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F7DFD62C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPLTests" */;
+			buildPhases = (
+				D9F7DFBB2C0A4AE900FD2181 /* Sources */,
+				D9F7DFBC2C0A4AE900FD2181 /* Frameworks */,
+				D9F7DFBD2C0A4AE900FD2181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9F7DFC12C0A4AE900FD2181 /* PBXTargetDependency */,
+			);
+			name = "Coolcicada PPLTests";
+			productName = "Coolcicada PPLTests";
+			productReference = D9F7DFBF2C0A4AE900FD2181 /* Coolcicada PPLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9F7DFC82C0A4AE900FD2181 /* Coolcicada PPLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9F7DFD92C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPLUITests" */;
+			buildPhases = (
+				D9F7DFC52C0A4AE900FD2181 /* Sources */,
+				D9F7DFC62C0A4AE900FD2181 /* Frameworks */,
+				D9F7DFC72C0A4AE900FD2181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9F7DFCB2C0A4AE900FD2181 /* PBXTargetDependency */,
+			);
+			name = "Coolcicada PPLUITests";
+			productName = "Coolcicada PPLUITests";
+			productReference = D9F7DFC92C0A4AE900FD2181 /* Coolcicada PPLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9F7DFA72C0A4AE700FD2181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					D9F7DFAE2C0A4AE700FD2181 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D9F7DFBE2C0A4AE900FD2181 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D9F7DFAE2C0A4AE700FD2181;
+					};
+					D9F7DFC82C0A4AE900FD2181 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D9F7DFAE2C0A4AE700FD2181;
+					};
+				};
+			};
+			buildConfigurationList = D9F7DFAA2C0A4AE700FD2181 /* Build configuration list for PBXProject "Coolcicada PPL" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9F7DFA62C0A4AE700FD2181;
+			productRefGroup = D9F7DFB02C0A4AE700FD2181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9F7DFAE2C0A4AE700FD2181 /* Coolcicada PPL */,
+				D9F7DFBE2C0A4AE900FD2181 /* Coolcicada PPLTests */,
+				D9F7DFC82C0A4AE900FD2181 /* Coolcicada PPLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9F7DFAD2C0A4AE700FD2181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F7DFBA2C0A4AE800FD2181 /* Preview Assets.xcassets in Resources */,
+				D9F7DFB72C0A4AE800FD2181 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFBD2C0A4AE900FD2181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFC72C0A4AE900FD2181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9F7DFAB2C0A4AE700FD2181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F7DFB52C0A4AE700FD2181 /* ContentView.swift in Sources */,
+				D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */,
+				D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */,
+				D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */,
+				D9F7DFE22C0A4FB100FD2181 /* Workout.swift in Sources */,
+				D9F7DFE62C0A535100FD2181 /* WorkoutView.swift in Sources */,
+				D9F7DFE82C0A537500FD2181 /* ExerciseView.swift in Sources */,
+				D9F7DFE42C0A52D800FD2181 /* WorkoutViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFBB2C0A4AE900FD2181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F7DFC42C0A4AE900FD2181 /* Coolcicada_PPLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9F7DFC52C0A4AE900FD2181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9F7DFCE2C0A4AE900FD2181 /* Coolcicada_PPLUITests.swift in Sources */,
+				D9F7DFD02C0A4AE900FD2181 /* Coolcicada_PPLUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9F7DFC12C0A4AE900FD2181 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F7DFAE2C0A4AE700FD2181 /* Coolcicada PPL */;
+			targetProxy = D9F7DFC02C0A4AE900FD2181 /* PBXContainerItemProxy */;
+		};
+		D9F7DFCB2C0A4AE900FD2181 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F7DFAE2C0A4AE700FD2181 /* Coolcicada PPL */;
+			targetProxy = D9F7DFCA2C0A4AE900FD2181 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D9F7DFD12C0A4AE900FD2181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9F7DFD22C0A4AE900FD2181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9F7DFD42C0A4AE900FD2181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coolcicada PPL/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9F7DFD52C0A4AE900FD2181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Coolcicada PPL/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9F7DFD72C0A4AE900FD2181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coolcicada PPL.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coolcicada PPL";
+			};
+			name = Debug;
+		};
+		D9F7DFD82C0A4AE900FD2181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coolcicada PPL.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Coolcicada PPL";
+			};
+			name = Release;
+		};
+		D9F7DFDA2C0A4AE900FD2181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coolcicada PPL";
+			};
+			name = Debug;
+		};
+		D9F7DFDB2C0A4AE900FD2181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Walker-Developer.Coolcicada-PPLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coolcicada PPL";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9F7DFAA2C0A4AE700FD2181 /* Build configuration list for PBXProject "Coolcicada PPL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F7DFD12C0A4AE900FD2181 /* Debug */,
+				D9F7DFD22C0A4AE900FD2181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F7DFD32C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F7DFD42C0A4AE900FD2181 /* Debug */,
+				D9F7DFD52C0A4AE900FD2181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F7DFD62C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F7DFD72C0A4AE900FD2181 /* Debug */,
+				D9F7DFD82C0A4AE900FD2181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9F7DFD92C0A4AE900FD2181 /* Build configuration list for PBXNativeTarget "Coolcicada PPLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9F7DFDA2C0A4AE900FD2181 /* Debug */,
+				D9F7DFDB2C0A4AE900FD2181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9F7DFA72C0A4AE700FD2181 /* Project object */;
+}
