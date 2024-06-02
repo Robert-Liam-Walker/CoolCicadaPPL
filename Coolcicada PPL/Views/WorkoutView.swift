@@ -14,5 +14,16 @@ struct WorkoutView: View {
             .padding()
         }
         .navigationBarTitle(workout.name, displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                print("Save button tapped for workout: \(workout.name)")
+            }) {
+                Text("Save")
+                    .padding(8)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(8)
+            }
+        )
     }
 }
