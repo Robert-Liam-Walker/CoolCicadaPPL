@@ -1,15 +1,15 @@
-//
-//  Workout.swift
-//  Coolcicada PPL
-//
-//  Created by Liam Walker on 5/31/24.
-//
-
 import Foundation
 
-struct Workout : Identifiable {
-    let id = UUID()
-    let name: String
+struct Workout: Identifiable {
+    var id: UUID
+    var name: String
+    var date: Date
     var exercises: [Exercise]
-    let date: Date
+
+    init(id: UUID = UUID(), name: String, date: Date, exercises: [Exercise] = []) {
+        self.id = id
+        self.name = name
+        self.date = date
+        self.exercises = exercises
+    }
 }

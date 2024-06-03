@@ -4,7 +4,7 @@ import Foundation
 class WorkoutViewModel: ObservableObject {
     @Published var workouts: [Workout] = []
     
-    //Publisher to signal
+    // Publisher to signal
     let workoutSaved = PassthroughSubject<Void, Never>()
     
     init() {
@@ -39,11 +39,10 @@ class WorkoutViewModel: ObservableObject {
             Exercise(name: "Standing Calf Raises (circuit machine)", sets: 5, reps: "10-12", weight: 0)
         ]
         
-        
         workouts = [
-            Workout(name: "Push (Chest/Triceps/Shoulders)", exercises: pushExercises, date: Date()),
-            Workout(name: "Pull (Back/Biceps)", exercises: pullExercises, date: Date()),
-            Workout(name: "Legs (Quad/Ham/Calves)", exercises: legsExercises, date: Date())
+            Workout(name: "Push (Chest/Triceps/Shoulders)", date: Date(), exercises: pushExercises),
+            Workout(name: "Pull (Back/Biceps)", date: Date(), exercises: pullExercises),
+            Workout(name: "Legs (Quad/Ham/Calves)", date: Date(), exercises: legsExercises)
         ]
     }
     
@@ -53,16 +52,20 @@ class WorkoutViewModel: ObservableObject {
                 var updatedExercise = workouts[workoutIndex].exercises[exerciseIndex]
                 updatedExercise.weight = weight
                 workouts[workoutIndex].exercises[exerciseIndex] = updatedExercise
+                print("exercise updated", updatedExercise, "weight", weight)
                 objectWillChange.send()
             }
         }
-    };
-    
-    func saveWorkout(_ workout: Workout) {
-        SQLiteDatabase.shared.insertWorkout(workout)
-        workoutSaved.send() // send signal as publisher that workout has been saved
-        print("View Model saved workout")
-        // could add saved successfully icon
     }
     
+    func saveWorkout(_ workout: Workout) {
+        if let workoutIdString = SQLiteDatabase.shared.insertWorkout(workout),
+           let workoutId = UUID(uuidString: workoutIdString) {
+            for exercise in workout.exercises {
+                _ = SQLiteDatabase.shared.insertExercise(exercise, forWorkoutId: workoutId)
+            }
+        }
+        print("Workout saved in WorkoutViewModel")
+        workoutSaved.send()
+    }
 }

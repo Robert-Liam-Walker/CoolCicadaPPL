@@ -16,6 +16,7 @@ struct ExerciseView: View {
                 Text("Weight: ")
                 TextField("Enter weight", text: $weightText, onCommit: {
                     if let weight = Int(weightText) {
+                        print("Weight updated in ExerciseView:", weight)
                         viewModel.updateWeight(for: exercise.id, weight: weight)
                     }
                 })
@@ -33,6 +34,12 @@ struct ExerciseView: View {
         .background(Color.white)
         .onTapGesture {
             UIApplication.shared.endEditing()
+        }
+        .onChange(of: weightText) {
+            if let weight = Int(weightText) {
+                print("Weight updated in ExerciseView:", weight)
+                viewModel.updateWeight(for: exercise.id, weight: weight)
+            }
         }
     }
 }

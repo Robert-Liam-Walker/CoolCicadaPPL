@@ -26,6 +26,7 @@
 		D9F7DFFB2C0D0B3300FD2181 /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */; };
 		D9F7DFFE2C0D1BF000FD2181 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = D9F7DFFD2C0D1BF000FD2181 /* SQLite */; };
 		D9F7E0012C0D23ED00FD2181 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7E0002C0D23ED00FD2181 /* SQLiteDatabase.swift */; };
+		D9F7E0032C0D2F9A00FD2181 /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7E0022C0D2F9A00FD2181 /* WorkoutDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D9F7DFF82C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryViewModel.swift; sourceTree = "<group>"; };
 		D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
 		D9F7E0002C0D23ED00FD2181 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		D9F7E0022C0D2F9A00FD2181 /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				D9F7DFE72C0A537500FD2181 /* ExerciseView.swift */,
 				D9F7DFF22C0CFF7B00FD2181 /* WorkoutListView.swift */,
 				D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */,
+				D9F7E0022C0D2F9A00FD2181 /* WorkoutDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				D9F7E0012C0D23ED00FD2181 /* SQLiteDatabase.swift in Sources */,
 				D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */,
 				D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */,
+				D9F7E0032C0D2F9A00FD2181 /* WorkoutDetailsView.swift in Sources */,
 				D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */,
 				D9F7DFE22C0A4FB100FD2181 /* Workout.swift in Sources */,
 				D9F7DFF32C0CFF7B00FD2181 /* WorkoutListView.swift in Sources */,
