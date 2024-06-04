@@ -63,9 +63,11 @@ class WorkoutViewModel: ObservableObject {
     }
     
     func saveWorkout(_ workout: Workout) {
-        if let workoutIdString = SQLiteDatabase.shared.insertWorkout(workout),
+        let updatedWorkout = Workout(name: workout.name, date: Date(), exercises: workout.exercises)
+
+        if let workoutIdString = SQLiteDatabase.shared.insertWorkout(updatedWorkout),
            let workoutId = UUID(uuidString: workoutIdString) {
-            for exercise in workout.exercises {
+            for exercise in updatedWorkout.exercises {
                 _ = SQLiteDatabase.shared.insertExercise(exercise, forWorkoutId: workoutId)
             }
         }
