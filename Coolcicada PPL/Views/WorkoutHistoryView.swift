@@ -6,11 +6,23 @@ struct WorkoutHistoryView: View {
     var body: some View {
         NavigationView {
             List(viewModel.workoutHistory) { workout in
-                NavigationLink(destination: WorkoutDetailsView(workout: workout)) {
-                    Text(workout.name)
+                NavigationLink(destination: WorkoutHistoryDetailsView(workout: workout)) {
+                    VStack(alignment: .leading) {
+                        Text(workout.name)
+                            .font(.headline)
+                        Text("\(workout.date, formatter: dateFormatter)")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
                 }
             }
             .navigationBarTitle("Workout History")
         }
     }
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }

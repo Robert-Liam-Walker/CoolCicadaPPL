@@ -9,7 +9,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView{
-            WorkoutListView(viewModel: viewModel)
+            WorkoutView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Workouts")

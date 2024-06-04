@@ -3,7 +3,7 @@ import SwiftUI
 struct ExerciseView: View {
     @ObservedObject var viewModel: WorkoutViewModel
     @State private var weightText: String = ""
-    let exercise: Exercise
+    var exercise: Exercise
     
     var body: some View {
         VStack(alignment: .leading) {

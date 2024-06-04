@@ -12,7 +12,7 @@ class WorkoutViewModel: ObservableObject {
     }
     
     func loadWorkouts() {
-        let pushExercises = [
+        var pushExercises = [
             Exercise(name: "Flat Barbell Bench Press", sets: 3, reps: "5", weight: 0),
             Exercise(name: "Seated (or Standing) Barbell Shoulder/Overhead Press", sets: 3, reps: "5", weight: 0),
             Exercise(name: "Incline Barbell Bench Press", sets: 3, reps: "5", weight: 0),
@@ -21,7 +21,7 @@ class WorkoutViewModel: ObservableObject {
             Exercise(name: "Overhead Dumbbell Extension or similar triceps exercise", sets: 3, reps: "10-12", weight: 0)
         ]
         
-        let pullExercises = [
+        var pullExercises = [
             Exercise(name: "Barbell Rows", sets: 3, reps: "5 (or Deadlifts 3x5)", weight: 0),
             Exercise(name: "Lat Pulldowns", sets: 3, reps: "8-10", weight: 0),
             Exercise(name: "Seated Rows", sets: 3, reps: "8-10", weight: 0),
@@ -31,7 +31,7 @@ class WorkoutViewModel: ObservableObject {
             Exercise(name: "Choice of one other bicep exercise (typically Hammer Curls)", sets: 3, reps: "10-12", weight: 0)
         ]
         
-        let legsExercises = [
+        var legsExercises = [
             Exercise(name: "Barbell Squats", sets: 4, reps: "5-6", weight: 0),
             Exercise(name: "Leg Press (optional if already doing above squats)", sets: 3, reps: "8-10", weight: 0),
             Exercise(name: "Leg Extensions (circuit machine)", sets: 3, reps: "10-12", weight: 0),
@@ -44,6 +44,10 @@ class WorkoutViewModel: ObservableObject {
             Workout(name: "Pull (Back/Biceps)", date: Date(), exercises: pullExercises),
             Workout(name: "Legs (Quad/Ham/Calves)", date: Date(), exercises: legsExercises)
         ]
+    }
+    
+    func getWorkout(by id: UUID) -> Workout? {
+        return workouts.first { $0.id == id }
     }
     
     func updateWeight(for exerciseId: UUID, weight: Int) {

@@ -2,29 +2,19 @@ import SwiftUI
 
 struct WorkoutView: View {
     @ObservedObject var viewModel: WorkoutViewModel
-    let workout: Workout
+    
+    init(viewModel: WorkoutViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        ScrollView{
-            VStack(alignment: .leading) {
-                ForEach(workout.exercises) { exercise in
-                    ExerciseView(viewModel: viewModel, exercise: exercise)
+        NavigationView {
+            List(viewModel.workouts) { workout in
+                NavigationLink(destination: WorkoutDetailsView(viewModel: viewModel, workout: workout)) {
+                    Text(workout.name)
                 }
             }
-            .padding()
+            .navigationBarTitle("Workouts")
         }
-        .navigationBarTitle(workout.name, displayMode: .inline)
-        .navigationBarItems(trailing:
-            Button(action: {
-                print("Save button tapped for workout: \(workout.name)")
-                viewModel.saveWorkout(workout)
-            }) {
-                Text("Save")
-                    .padding(8)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(8)
-            }
-        )
     }
 }
