@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94CB6BA2C0F7A7D00960F66 /* CustomWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CB6B92C0F7A7D00960F66 /* CustomWorkoutViewModel.swift */; };
+		D94CB6BC2C0F7C5500960F66 /* CustomWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CB6BB2C0F7C5500960F66 /* CustomWorkoutView.swift */; };
 		D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFB22C0A4AE700FD2181 /* Coolcicada_PPLApp.swift */; };
 		D9F7DFB52C0A4AE700FD2181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */; };
 		D9F7DFB72C0A4AE800FD2181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F7DFB62C0A4AE800FD2181 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D94CB6B92C0F7A7D00960F66 /* CustomWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWorkoutViewModel.swift; sourceTree = "<group>"; };
+		D94CB6BB2C0F7C5500960F66 /* CustomWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWorkoutView.swift; sourceTree = "<group>"; };
 		D9F7DFAF2C0A4AE700FD2181 /* Coolcicada PPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coolcicada PPL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F7DFB22C0A4AE700FD2181 /* Coolcicada_PPLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coolcicada_PPLApp.swift; sourceTree = "<group>"; };
 		D9F7DFB42C0A4AE700FD2181 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			children = (
 				D9F7DFE32C0A52D800FD2181 /* WorkoutViewModel.swift */,
 				D9F7DFF82C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift */,
+				D94CB6B92C0F7A7D00960F66 /* CustomWorkoutViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				D9F7DFF22C0CFF7B00FD2181 /* WorkoutView.swift */,
 				D9F7DFFA2C0D0B3300FD2181 /* WorkoutHistoryView.swift */,
 				D9F7E0022C0D2F9A00FD2181 /* WorkoutHistoryDetailsView.swift */,
+				D94CB6BB2C0F7C5500960F66 /* CustomWorkoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,11 +350,13 @@
 				D9F7DFF92C0D0A7C00FD2181 /* WorkoutHistoryViewModel.swift in Sources */,
 				D9F7DFB52C0A4AE700FD2181 /* ContentView.swift in Sources */,
 				D9F7E0012C0D23ED00FD2181 /* SQLiteDatabase.swift in Sources */,
+				D94CB6BC2C0F7C5500960F66 /* CustomWorkoutView.swift in Sources */,
 				D9F7DFB32C0A4AE700FD2181 /* Coolcicada_PPLApp.swift in Sources */,
 				D9F7DFEB2C0CD11A00FD2181 /* UIApplication+Extension.swift in Sources */,
 				D9F7E0032C0D2F9A00FD2181 /* WorkoutHistoryDetailsView.swift in Sources */,
 				D9F7DFE02C0A4FA000FD2181 /* Exercise.swift in Sources */,
 				D9F7DFE22C0A4FB100FD2181 /* Workout.swift in Sources */,
+				D94CB6BA2C0F7A7D00960F66 /* CustomWorkoutViewModel.swift in Sources */,
 				D9F7DFF32C0CFF7B00FD2181 /* WorkoutView.swift in Sources */,
 				D9F7DFFB2C0D0B3300FD2181 /* WorkoutHistoryView.swift in Sources */,
 				D9F7DFE62C0A535100FD2181 /* WorkoutDetailsView.swift in Sources */,

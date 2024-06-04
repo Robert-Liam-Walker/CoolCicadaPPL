@@ -14,8 +14,8 @@ class WorkoutHistoryViewModel: ObservableObject {
     }
     
     func fetchWorkoutHistory() {
-        workoutHistory = SQLiteDatabase.shared.fetchWorkouts()
-        print("workouthistoryviewmodel fetched workout history")
+        workoutHistory = SQLiteDatabase.shared.fetchHistoryWorkouts()
+        print("WorkoutHistoryViewModel fetched workout history", workoutHistory)
     }
 
     // Function to delete a saved workout

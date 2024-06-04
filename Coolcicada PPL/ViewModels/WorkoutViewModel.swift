@@ -40,9 +40,9 @@ class WorkoutViewModel: ObservableObject {
         ]
         
         workouts = [
-            Workout(name: "Push (Chest/Triceps/Shoulders)", date: Date(), exercises: pushExercises),
-            Workout(name: "Pull (Back/Biceps)", date: Date(), exercises: pullExercises),
-            Workout(name: "Legs (Quad/Ham/Calves)", date: Date(), exercises: legsExercises)
+            Workout(name: "Push (Chest/Triceps/Shoulders)", type: "default", date: Date(), exercises: pushExercises),
+            Workout(name: "Pull (Back/Biceps)", type: "default", date: Date(), exercises: pullExercises),
+            Workout(name: "Legs (Quad/Ham/Calves)", type: "default", date: Date(), exercises: legsExercises)
         ]
     }
     
@@ -63,7 +63,7 @@ class WorkoutViewModel: ObservableObject {
     }
     
     func saveWorkout(_ workout: Workout) {
-        let updatedWorkout = Workout(name: workout.name, date: Date(), exercises: workout.exercises)
+        let updatedWorkout = Workout(name: workout.name, type: "history", date: Date(), exercises: workout.exercises)
 
         if let workoutIdString = SQLiteDatabase.shared.insertWorkout(updatedWorkout),
            let workoutId = UUID(uuidString: workoutIdString) {
@@ -72,6 +72,7 @@ class WorkoutViewModel: ObservableObject {
             }
         }
         print("Workout saved in WorkoutViewModel")
+        print("Workout type in WorkoutViewModel: ", updatedWorkout)
         workoutSaved.send()
     }
 }
