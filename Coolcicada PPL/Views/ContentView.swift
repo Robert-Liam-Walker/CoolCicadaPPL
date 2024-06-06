@@ -2,8 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: WorkoutViewModel
+    //@ObservedObject var customWorkoutViewModel: CustomWorkoutViewModel
     
     init(viewModel: WorkoutViewModel) {
+        //customWorkoutViewModel = CustomWorkoutViewModel()
+        //viewModel = WorkoutViewModel(customWorkoutViewModel)
         self.viewModel = viewModel
     }
     

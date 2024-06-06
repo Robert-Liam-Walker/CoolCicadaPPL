@@ -11,7 +11,7 @@ import SwiftUI
 struct Coolcicada_PPLApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: WorkoutViewModel())
+            ContentView(viewModel: WorkoutViewModel(customWorkoutViewModel: CustomWorkoutViewModel()))
         }
     }
 }

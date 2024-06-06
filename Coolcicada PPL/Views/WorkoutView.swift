@@ -2,9 +2,11 @@ import SwiftUI
 
 struct WorkoutView: View {
     @ObservedObject var viewModel: WorkoutViewModel
+    //@ObservedObject var customWorkoutViewModel: CustomWorkoutViewModel
     
     init(viewModel: WorkoutViewModel) {
         self.viewModel = viewModel
+        //self.customWorkoutViewModel = CustomWorkoutViewModel()
     }
     
     var body: some View {
@@ -25,8 +27,8 @@ struct WorkoutView: View {
                     }
                 }
                 HStack {
-                    Button("Add custom workout") { print("test")
-                        //NavigationLink(destination: CustomWorkoutView())
+                    NavigationLink(destination: CustomWorkoutView(viewModel: viewModel.customWorkoutViewModel)){
+                        Text("Add Custom Workout")
                     }
                 }
             }

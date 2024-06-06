@@ -1,12 +1,16 @@
 import Foundation
 import SwiftUI
-/*
+import Combine
+
 class CustomWorkoutViewModel: ObservableObject {
     @Published var workout : Workout
     
+    // Publisher to signal
+    let workoutSaved = PassthroughSubject<Void, Never>()
+    
     init(){
-        workout.date = Date()
-        workout.name = "New Workout"
+        print("CustomWorkoutViewModel being initialized")
+        workout = Workout(name: "New Workout", type: "custom", date: Date(), exercises: [])
     }
     
     func modifyTitle(_ title : String) {
@@ -25,10 +29,17 @@ class CustomWorkoutViewModel: ObservableObject {
     }
     
     func saveWorkout() {
-        workoutViewModel.workouts.append(workout)
-        // save to database as well
-        // in workoutViewModel, load workouts from database as append
-        // how to differentiate between past workouts and custom workouts? new field in Workout model - workout type
+        print("CustomWorkoutViewModel saveWorkout func")
+        print("CustomWorkoutViewModel - exercises", workout.exercises)
+
+        if let workoutIdString = SQLiteDatabase.shared.insertWorkout(workout),
+           let workoutId = UUID(uuidString: workoutIdString) {
+            for exercise in workout.exercises {
+                _ = SQLiteDatabase.shared.insertExercise(exercise, forWorkoutId: workoutId)
+            }
+        }
+        workoutSaved.send()
+        print("CustomWorkoutViewModel sent workoutSaved.send()")
     }
 }
-*/
+

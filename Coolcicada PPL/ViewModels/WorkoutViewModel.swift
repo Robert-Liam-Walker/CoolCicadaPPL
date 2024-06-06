@@ -3,12 +3,18 @@ import Foundation
 
 class WorkoutViewModel: ObservableObject {
     @Published var workouts: [Workout] = []
+    private var cancellables = Set<AnyCancellable>()
     
     // Publisher to signal
     let workoutSaved = PassthroughSubject<Void, Never>()
     
-    init() {
+    let customWorkoutViewModel: CustomWorkoutViewModel
+    
+    init(customWorkoutViewModel : CustomWorkoutViewModel) {
+        self.customWorkoutViewModel = customWorkoutViewModel
         loadWorkouts()
+        //fetchCustomWorkouts()
+        setupSubscriptions()
     }
     
     func loadWorkouts() {
@@ -44,6 +50,10 @@ class WorkoutViewModel: ObservableObject {
             Workout(name: "Pull (Back/Biceps)", type: "default", date: Date(), exercises: pullExercises),
             Workout(name: "Legs (Quad/Ham/Calves)", type: "default", date: Date(), exercises: legsExercises)
         ]
+        fetchCustomWorkouts()
+        //print("WorkoutViewModel loading custom workouts")
+        //print(SQLiteDatabase.shared.fetchCustomWorkouts())
+        //workouts.append(contentsOf: SQLiteDatabase.shared.fetchCustomWorkouts())
     }
     
     func getWorkout(by id: UUID) -> Workout? {
@@ -74,5 +84,30 @@ class WorkoutViewModel: ObservableObject {
         print("Workout saved in WorkoutViewModel")
         print("Workout type in WorkoutViewModel: ", updatedWorkout)
         workoutSaved.send()
+    }
+    
+    func fetchCustomWorkouts() {
+        // it's appending the same results every time this gets called ... error
+        // append just the new custom workouts
+        //workouts.append(contentsOf: SQLiteDatabase.shared.fetchCustomWorkouts())
+        let newCustomWorkouts = SQLiteDatabase.shared.fetchCustomWorkouts()
+        
+        let existingWorkoutIDs = Set(workouts.map { $0.id })
+
+        // Append only new workouts
+        let uniqueNewWorkouts = newCustomWorkouts.filter { !existingWorkoutIDs.contains($0.id) }
+
+        if !uniqueNewWorkouts.isEmpty {
+            workouts.append(contentsOf: uniqueNewWorkouts)
+        }
+    }
+    
+    private func setupSubscriptions() {
+        print("WorkoutViewModel received customWorkoutViewModel.workoutSaved")
+        customWorkoutViewModel.workoutSaved
+            .sink { [weak self] _ in
+                self?.fetchCustomWorkouts() // Fetch updated workout history when a workout is saved
+            }
+            .store(in: &cancellables)
     }
 }
