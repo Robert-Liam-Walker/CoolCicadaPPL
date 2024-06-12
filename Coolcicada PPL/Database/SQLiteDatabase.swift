@@ -211,4 +211,14 @@ class SQLiteDatabase {
         }
         return workoutsList
     }
+    
+    func deleteWorkout(_ workoutId: UUID) {
+        do {
+            let workout = workouts.filter(id == workoutId.uuidString)
+            try db?.run(workout.delete())
+            print("Delete workout succeeded")
+        } catch {
+            print("Delete workout failed: \(error)")
+        }
+    }
 }

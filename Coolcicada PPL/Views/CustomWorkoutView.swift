@@ -52,7 +52,7 @@ struct CustomWorkoutView: View {
         .navigationBarTitle(viewModel.workout.name, displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
-            print("Save button tapped for new workout: \(viewModel.workout.name)")
+                print("Save button tapped for new workout: \(viewModel.workout.name)")
                 viewModel.saveWorkout()
             }) {
                 Text("Save")

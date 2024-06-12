@@ -86,21 +86,26 @@ class WorkoutViewModel: ObservableObject {
         workoutSaved.send()
     }
     
-    func fetchCustomWorkouts() {
-        // it's appending the same results every time this gets called ... error
-        // append just the new custom workouts
-        //workouts.append(contentsOf: SQLiteDatabase.shared.fetchCustomWorkouts())
-        let newCustomWorkouts = SQLiteDatabase.shared.fetchCustomWorkouts()
-        
-        let existingWorkoutIDs = Set(workouts.map { $0.id })
-
-        // Append only new workouts
-        let uniqueNewWorkouts = newCustomWorkouts.filter { !existingWorkoutIDs.contains($0.id) }
-
-        if !uniqueNewWorkouts.isEmpty {
-            workouts.append(contentsOf: uniqueNewWorkouts)
+    func deleteWorkout(_ workout: Workout) {
+        if let index = workouts.firstIndex(where: { $0.id == workout.id }) {
+            workouts.remove(at: index)
+            SQLiteDatabase.shared.deleteWorkout(workout.id)
+            objectWillChange.send()
         }
     }
+    
+    func fetchCustomWorkouts() {
+        let newCustomWorkouts = SQLiteDatabase.shared.fetchCustomWorkouts()
+        
+        // Filter out custom workouts from the current list
+        workouts.removeAll { $0.type == "custom" }
+        
+        // Append the new custom workouts
+        workouts.append(contentsOf: newCustomWorkouts)
+        
+        objectWillChange.send()  // Notify the view of the change
+    }
+
     
     private func setupSubscriptions() {
         print("WorkoutViewModel received customWorkoutViewModel.workoutSaved")
