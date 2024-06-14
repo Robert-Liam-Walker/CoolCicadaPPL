@@ -9,7 +9,7 @@ struct ExerciseView: View {
         VStack(alignment: .leading) {
             Text(exercise.name)
                 .font(.headline)
-            Text("\(exercise.sets) sets of \(exercise.reps)")
+            Text("\(formatSetsAndReps())")
                 .font(.subheadline)
             
             HStack {
@@ -41,5 +41,12 @@ struct ExerciseView: View {
                 viewModel.updateWeight(for: exercise.id, weight: weight)
             }
         }
+    }
+    
+    // Helper function to format sets and reps text
+    private func formatSetsAndReps() -> String {
+        let setsString = exercise.sets == 1 ? "set" : "sets"
+        let repsString = exercise.reps == "1" ? "rep" : "reps"
+        return "\(exercise.sets) \(setsString) of \(exercise.reps) \(repsString)"
     }
 }
