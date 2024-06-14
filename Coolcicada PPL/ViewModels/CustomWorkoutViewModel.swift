@@ -18,6 +18,11 @@ class CustomWorkoutViewModel: ObservableObject {
         print("Title modified: ", workout.name)
     }
     
+    func renameWorkout(to newName: String) {
+        workout.name = newName
+        objectWillChange.send()
+    }
+    
     func addExercise(_ exercise : Exercise) {
         workout.exercises.append(exercise)
         print("Exercise added: ", workout.exercises.last)

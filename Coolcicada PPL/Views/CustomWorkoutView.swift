@@ -8,10 +8,52 @@ struct CustomWorkoutView: View {
     @State private var sets: String = ""
     @State private var reps: String = ""
     
+    @State private var isEditingName = false // Track whether the name is being edited
+    @State private var newWorkoutName = "" // Store the new workout name
+    
     @State private var cancellables = Set<AnyCancellable>()
     
     var body: some View {
         VStack {
+            // Display the workout name and edit button
+            HStack {
+                if isEditingName {
+                    TextField("New Workout Name", text: $newWorkoutName)
+                        .font(.title)
+                        .textFieldStyle(PlainTextFieldStyle()) // Remove border to make it look seamless
+                        .padding(.leading)
+                    
+                    Button(action: {
+                        viewModel.renameWorkout(to: newWorkoutName)
+                        isEditingName = false
+                    }) {
+                        Text("Save")
+                            .padding(8)
+                            .foregroundColor(.white)
+                            .background(Color.gray)
+                            .cornerRadius(8)
+                    }
+                    .padding(.trailing)
+                } else {
+                    Text(viewModel.workout.name)
+                        .font(.title)
+                        .padding(.leading)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        newWorkoutName = viewModel.workout.name // Pre-fill with the current name
+                        isEditingName = true
+                    }) {
+                        Image(systemName: "pencil")
+                            .padding(8)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.trailing)
+                }
+            }
+            .padding(.vertical)
+
             List {
                 ForEach(viewModel.workout.exercises) { exercise in
                     VStack{
